@@ -1,0 +1,10 @@
+<form action="{% url 'mongo:add_recept' %}" method='post'>
+    {% csrf_token %}
+    Name: <input type="text" name="name"><br>
+    aantalCalorieen: <input type="text" name="aantalcalorieen"><br>
+    ingredienten: <input type="text" name="ingredienten"><br>
+    Benodigde tijd: <input type="text" name="tijd"><br>
+    
+    <input type="submit" value="Add" />
+
+</form>

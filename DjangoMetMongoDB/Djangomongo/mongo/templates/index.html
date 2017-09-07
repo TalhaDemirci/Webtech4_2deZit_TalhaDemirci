@@ -1,0 +1,22 @@
+<h2>Recepten</h2>
+
+
+
+ <h2><a href="{% url 'mongo:add_recept' %}">Add an recept</a><br/></h2>
+<ul>
+    
+    
+    <h1>Geordend op naam</h1>
+    {% for recept in recept_list|dictsort:"recept_name" %}
+        <li>{{ recept.recept_name}} {{recept.tijd}} minuten</li>
+    {% endfor %}
+    <br>
+    <br>
+    
+    <h1>Geordend op tijd</h1>
+    {% for recept in recept_list|dictsort:"tijd" %}
+        <li>{{ recept.recept_name}} {{recept.tijd}} minuten</li>
+    {% endfor %}
+    
+</ul>
+
